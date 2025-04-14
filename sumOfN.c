@@ -2,15 +2,19 @@
 #include <stdlib.h>
 
 int isSum(int number){
-    if(number == 1){
+    if (number == 0){
+        return 0;
+    }
+    
+    if (number == 1){
         return 1;
-    }    else {
+    } else {
         return number + isSum(number -1);
     }
 }
 
 int main(){
-    int number = 1;
+    int number = 0;
     
     int k = isSum(number);
     printf("Sum of number: %d\n",k);
